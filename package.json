@@ -1,0 +1,22 @@
+{
+  "name": "news-scraper-api",
+  "version": "1.0.0",
+  "description": "REST API for news",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caioreis29974/news-scraper-api.git"
+  },
+  "author": "CaioXyZ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caioreis29974/news-scraper-api/issues"
+  },
+  "homepage": "https://github.com/caioreis29974/news-scraper-api#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
