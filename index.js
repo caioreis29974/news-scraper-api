@@ -1,6 +1,5 @@
 const express = require("express");
 app = express();
-port = 6504;
 const { UOLNews } = require("./routes/uol")
 const { CNN } = require("./routes/cnn")
 const { BBC } = require("./routes/bbc")
@@ -39,6 +38,7 @@ app.get("/bbc", async (req, res) => {
     }
 });
 
-app.listen(`https://news-scraper-api-ten.vercel.app`, () => {
-    console.log(`API is running: < https://news-scraper-api-ten.vercel.app >`)
-})
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`API is running ${PORT}`);
+});
