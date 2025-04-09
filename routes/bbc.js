@@ -23,6 +23,4 @@ const BBC = async() => {
     };
 };
 
-BBC().then(console.log).catch(console.error);
-
 module.exports = { BBC }
