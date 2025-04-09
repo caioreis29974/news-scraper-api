@@ -39,6 +39,6 @@ app.get("/bbc", async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`API is running: < http://localhost:${port} >`)
+app.listen(`https://news-scraper-api-ten.vercel.app`, () => {
+    console.log(`API is running: < https://news-scraper-api-ten.vercel.app >`)
 })
