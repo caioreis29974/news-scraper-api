@@ -20,6 +20,4 @@ const UOLNews = async() => {
     };
 };
 
-UOLNews();
-
 module.exports = { UOLNews }
