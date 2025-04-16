@@ -5,9 +5,19 @@ const { CNN } = require("./routes/cnn")
 const { BBC } = require("./routes/bbc")
 const { G1 } = require("./routes/g1")
 
-app.get("/", (req, res) => {
-    res.send("First Test")
-})
+router.get('/', (req, res) => {
+    res.json({
+        nome: "RESTful News API using Web Scraping",
+        status: "Online",
+        autor: "CaioXyZ",
+        endpoints: {
+            g1: "/g1",
+            uol: "/uol",
+            cnn: "/cnn",
+            bbc: "/bbc"
+        }
+    });
+});
 
 app.get("/uol", async (req, res) => {
     try {
