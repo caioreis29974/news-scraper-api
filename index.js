@@ -3,6 +3,7 @@ app = express();
 const { UOLNews } = require("./routes/uol")
 const { CNN } = require("./routes/cnn")
 const { BBC } = require("./routes/bbc")
+const { G1 } = require("./routes/g1")
 
 app.get("/", (req, res) => {
     res.send("First Test")
