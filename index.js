@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
         nome: "RESTful News API using Web Scraping",
         status: "Online",
         autor: "CaioXyZ",
+        time: new Date().toLocaleTimeString(),
         endpoints: {
             g1: "/g1",
             uol: "/uol",
