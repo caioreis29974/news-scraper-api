@@ -39,6 +39,17 @@ app.get("/bbc", async (req, res) => {
     }
 });
 
+app.get('/g1', async (req, res) => {
+    try {
+        const news = await G1();
+
+        res.json(news);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error to search news!');
+    }
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`API is running ${PORT}`);
