@@ -7,7 +7,7 @@ const { G1 } = require("./routes/g1")
 
 app.get('/', (req, res) => {
     res.json({
-        nome: "RESTful News API using Web Scraping",
+        name: "RESTful News API using Web Scraping",
         status: "Online",
         author: "CaioXyZ",
         current_time: new Date().toLocaleTimeString(),
