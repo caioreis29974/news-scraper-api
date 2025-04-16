@@ -5,7 +5,7 @@ const { CNN } = require("./routes/cnn")
 const { BBC } = require("./routes/bbc")
 const { G1 } = require("./routes/g1")
 
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.json({
         nome: "RESTful News API using Web Scraping",
         status: "Online",
