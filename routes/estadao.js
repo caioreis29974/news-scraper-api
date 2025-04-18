@@ -9,18 +9,15 @@ const FetchData = async (url) => {
 const ESTADAO = async() => {
     const content = await FetchData('https://www.estadao.com.br');
     const $ = cheerio.load(content);
-    const titles = [];
-    $('.headline').each((i, el) => {
-        titles.push($(el).text().trim());
-    });
-
     const formattedNews = {};
-    const numberOfNews = Math.min(5, titles.length);
+    const numberOfNews = 5;
 
-    for (let i = 0; i < numberOfNews; i++) {
-        formattedNews[`new${i + 1}`] = titles[i];
-        formattedNews[`img_new${i + 1}`] = "";
-    }
+    $('.headline').each((i, el) => {
+        if (i < numberOfNews) {
+            const title = $(el).text().trim();
+            formattedNews[`new${i + 1}`] = title;
+        }
+    });
 
     return [
         {
@@ -29,9 +26,7 @@ const ESTADAO = async() => {
         {
             "link": "https://www.estadao.com.br"
         },
-        {
-            ...formattedNews
-        }
+        formattedNews
     ];
 };
 
