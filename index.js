@@ -15,7 +15,8 @@ app.get('/', (req, res) => {
             g1: "/g1",
             uol: "/uol",
             cnn: "/cnn",
-            bbc: "/bbc"
+            bbc: "/bbc",
+            estadao: "/estadao"
         }
     });
 });
