@@ -4,6 +4,7 @@ const { UOLNews } = require("./routes/uol")
 const { CNN } = require("./routes/cnn")
 const { BBC } = require("./routes/bbc")
 const { G1 } = require("./routes/g1")
+const { ESTADAO } = require("./routes/estadao")
 
 app.get('/', (req, res) => {
     res.json({
@@ -54,6 +55,17 @@ app.get("/bbc", async (req, res) => {
 app.get('/g1', async (req, res) => {
     try {
         const news = await G1();
+
+        res.json(news);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error to search news!');
+    }
+});
+
+app.get('/estadao', async (req, res) => {
+    try {
+        const news = await ESTADAO();
 
         res.json(news);
     } catch (error) {

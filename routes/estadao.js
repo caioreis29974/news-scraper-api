@@ -32,7 +32,6 @@ const ESTADAO = async() => {
 
 async function main() {
     const estadaoData = await ESTADAO();
-    console.log(JSON.stringify(estadaoData, null, 2));
 }
 
 main();
